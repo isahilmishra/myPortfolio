@@ -114,6 +114,7 @@ export function Hero() {
               src="/profile.jpg"
               alt="Sahil Raj"
               fill
+              sizes="(max-width: 768px) 256px, 320px"
               className="object-cover rounded-full p-1"
               priority
             />

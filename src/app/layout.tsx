@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Roboto_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({
-  variable: "--font-inter",
+const robotoMono = Roboto_Mono({
+  variable: "--font-inter", // keeping the variable name same so we don't break CSS
   subsets: ["latin"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-outfit", // keeping the variable name same
   subsets: ["latin"],
 });
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased bg-dots min-h-screen`}
+        className={`${robotoMono.variable} ${spaceGrotesk.variable} antialiased bg-dots min-h-screen`}
       >
         <ThemeProvider
           attribute="class"

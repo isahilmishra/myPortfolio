@@ -58,7 +58,9 @@ export function About() {
               src="/profile.jpg"
               alt="Sahil Raj"
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
+              priority
             />
           </div>
         </div>
