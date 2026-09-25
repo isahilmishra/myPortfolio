@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Menu, X } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,11 +53,29 @@ export function Navbar() {
             ))}
           </ul>
           <div className="h-5 w-px bg-card-border"></div>
+          <a
+            href="https://github.com/isahilmishra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/80 hover:text-accent transition-colors"
+            aria-label="GitHub Profile"
+          >
+            <FaGithub size={20} />
+          </a>
           <ThemeToggle />
         </nav>
 
         {/* Mobile Nav Toggle */}
         <div className="flex items-center gap-4 md:hidden">
+          <a
+            href="https://github.com/isahilmishra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/80 hover:text-accent transition-colors"
+            aria-label="GitHub Profile"
+          >
+            <FaGithub size={20} />
+          </a>
           <ThemeToggle />
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
